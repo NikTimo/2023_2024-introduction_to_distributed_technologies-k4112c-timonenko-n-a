@@ -16,7 +16,7 @@ Date of finished:
 ```
 minikube start
 ```
-![img1](\img\img1.png)  
+![img1](img\img1.png)  
 Создание "пода" с использованием файла HashiCorpVault-pod
 ```
 kubectl create -f HashiCorpVault-pod.yml 
