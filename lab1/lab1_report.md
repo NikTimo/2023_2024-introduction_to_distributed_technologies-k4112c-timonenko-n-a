@@ -41,7 +41,7 @@ spec:
 minikube kubectl -- expose pod vault --type=NodePort --port=8200
 minikube kubectl -- port-forward service/vault 8200:8200
 ```
-![img2](img\img2.png)
+![img2](.\img\img2.png)
 После указанных действий хранилище доступно по адресу [http://localhost:8200](http://localhost:8200), однако для доступа нужно найти токе в логах:
 ```
 minikube kubectl -- logs vault
