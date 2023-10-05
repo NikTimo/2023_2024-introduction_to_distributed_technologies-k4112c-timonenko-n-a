@@ -16,7 +16,7 @@ Date of finished:
 ```
 minikube start
 ```
-![img1](img\img1.png)  
+![img1](img/img1.png)  
 Создание "пода" с использованием файла HashiCorpVault-pod
 ```
 kubectl create -f HashiCorpVault-pod.yml 
@@ -41,14 +41,14 @@ spec:
 minikube kubectl -- expose pod vault --type=NodePort --port=8200
 minikube kubectl -- port-forward service/vault 8200:8200
 ```
-![img2](.\img\img2.png)
+![img2](img/img2.png)
 После указанных действий хранилище доступно по адресу [http://localhost:8200](http://localhost:8200), однако для доступа нужно найти токе в логах:
 ```
 minikube kubectl -- logs vault
 ```
-![img3](img\img3.png)
-![img4](img\img4.png)
-![img5](img\img5.png)
+![img3](img/img3.png)
+![img4](img/img4.png)
+![img5](img/img5.png)
 ### Ответы на вопросы
 - Что сейчас произошло и что сделали команды указанные ранее?
 
