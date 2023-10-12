@@ -17,6 +17,7 @@ Date of finished:
 minikube start --driver docker
 ```
 ![img1](img/img1.png)
+
 Создадим deployment на основе манифеста. В манифесте указываем образ для контейнера, количество реплик - 2, передаем значения для переменных и значение порта контейнера. После создания проверяем наличие деплоймента и двух реплик контейнера.
 ```
 kubectl create -f front_deployment.yml 
@@ -68,8 +69,10 @@ spec:
     targetPort: 3000
 ```
 ![img3](img/img3.png)
+
 После этого контейнер должен быть доступен по адресу [http://localhost:1117](http://localhost:1117), онако получаем ошибку - страница не найдена.
 ![img4](img/img4.png)
+
 На скриншотах выше, видим, что есть ошибка при получении образа.
 Удаляем деплоймент:
 ```
@@ -91,11 +94,13 @@ ifilyaninitmo/itdt-contained-frontend:master
 kubectl create -f front_deployment.yml && kubectl create -f service.yml
 ```
 ![img5](img/img5.png)
+
 Вспоминаю, что так же не прокинут порт с localhost в сервис. Выполняем:
 ```
 kubectl port-forward service/front-service 5589:1117
 ```
 ![img6](img/img6.png)
+
 Значения username и company_name будут неизменными, имя же контейнера и IP могут изменяться в зависисмости от того, в какой контейнер попал запрос.
 Просмотрим логи подов
 ```
