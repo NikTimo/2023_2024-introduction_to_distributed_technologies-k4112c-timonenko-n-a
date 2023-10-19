@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-10-19T13:02:19Z"
+  name: front-replicaset
+  namespace: default
+  resourceVersion: "34960"
+  uid: bfe7c212-27b2-4a27-b304-50c5bf8625e9
+spec:
+  clusterIP: 10.110.10.88
+  clusterIPs:
+  - 10.110.10.88
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31573
+    port: 4549
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: front
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

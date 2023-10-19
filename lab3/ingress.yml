@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: "2023-10-19T15:54:51Z"
+  generation: 1
+  name: testingress
+  namespace: default
+  resourceVersion: "44816"
+  uid: 390dd5c6-1c69-4129-8fac-408047b9a341
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: testdomain123.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: front-replicaset
+            port:
+              number: 4549
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - testdomain123.local
+    secretName: tls-secret
+status:
+  loadBalancer: {}

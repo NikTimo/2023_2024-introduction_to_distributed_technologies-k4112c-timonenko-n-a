@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  REACT_APP_COMPANY_NAME: CM value 2
+  REACT_APP_USERNAME: CM value 1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-10-19T07:33:47Z"
+  name: front-configmap
+  namespace: default
+  resourceVersion: "16944"
+  uid: c4a2e634-1f68-490f-bf3d-610e43dcbb11

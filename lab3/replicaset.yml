@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: front-replicaset
+spec:
+  replicas: 2
+  selector:
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: front
+        image: ifilyaninitmo/itdt-contained-frontend:master
+        envFrom:
+        - configMapRef:
+            name: front-configmap
+        ports:
+        - containerPort: 3000
