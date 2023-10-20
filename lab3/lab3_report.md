@@ -6,7 +6,7 @@ Group: K4112c
 Author: Timonenko Nikolay Alexandrovich
 Lab: Lab3
 Date of create: 19.10.2023
-Date of finished: 
+Date of finished: 19.10.2023
 
 ## Лабораторная работа №3 "Сертификаты и "секреты" в Minikube, безопасное хранение данных."
 ### Цель работы
@@ -43,7 +43,7 @@ openssl x509 -signkey cert/domain.key -in cert/domain.csr -req -days 365 -out ce
 ```
 ![img8](img/img8.png)
 
-Создаем Secret с помощью создангного сертификата.
+Создаем Secret с помощью созданного сертификата.
 ```
 kubectl create secret tls tls-secret -o yaml --key=cert/domain.key --cert=cert/domain.crt > secret.yml
 ```
