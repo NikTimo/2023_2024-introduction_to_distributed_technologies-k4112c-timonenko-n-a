@@ -79,7 +79,7 @@ kubectl port-forward svc/front-deployment  9000:4549
 
 ![img8](img/img8.png)
 
-Переменные Container name` и `Container IP` изменяются в зависисмости от пода, куда попал запрос. Для проверки убьем один из подов и проверим значения переменных.
+Переменные `Container name` и `Container IP` изменяются в зависисмости от пода, куда попал запрос. Для проверки убьем один из подов и проверим значения переменных.
 ```
 kubectl delete pod/front-deployment-77ff9f8759-dz9vp
 kubectl port-forward svc/front-deployment  9000:4549
