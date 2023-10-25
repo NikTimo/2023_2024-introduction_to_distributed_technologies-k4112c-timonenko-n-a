@@ -55,7 +55,7 @@ spec:
 Удалим имеющийся IPPool и создадим новые на основе манифеста.
 ```
 kubectl calico delete ippools default-ipv4-ippool --allow-version-mismatch
-calico create -f calico.yml --allow-version-mismatch
+kubectl calico create -f calico.yml --allow-version-mismatch
 kubectl calico get ippool --allow-version-mismatch
 ```
 ![img3](img/img3.png)
